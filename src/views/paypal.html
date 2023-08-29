@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AZGq4OBfSJHnkSMOQpu-LuFebEFKfrXkEot9OXS4-PU5EcZd7adKZ1NrUj4UYkrUcdGAtFYmN-X4F-SN&currency=USD&vault=true&intent=subscription"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
+    <script>
+      paypal
+        .Buttons({
+          // Sets up the transaction when a payment button is clicked
+          // createOrder: function (data, actions) {
+          //   return fetch("/api/orders", {
+          //     method: "post",
+          //     // use the "body" param to optionally pass additional order information
+          //     // like product ids or amount
+          //   })
+          //     .then((response) => response.json())
+          //     .then((order) => order.id);
+          // },
+          // Sets up the subscription when a payment button is clicked
+          createSubscription: function (data, actions) {
+            // fetch("/api/success");
+            return fetch("/api/subscribe", {
+              method: "post",
+              // use the "body" param to optionally pass additional order information
+              // like product ids or amount
+            })
+              .then((response) => response.json())
+              .then((order) => order.id);
+          },
+          // Finalize the transaction after payer approval
+          onApprove: function (data, actions) {
+            console.log(data);
+            return fetch('api/success');
+            // return fetch(`/api/orders/${data.subscriptionID}/capture`, {
+            //   method: "post",
+            // })
+            //   .then((response) => response.json())
+            //   .then((orderData) => {
+            //     // Successful capture! For dev/demo purposes:
+            //     console.log(
+            //       "Capture result",
+            //       orderData,
+            //       JSON.stringify(orderData, null, 2)
+            //     );
+            //     var transaction =
+            //       orderData.purchase_units[0].payments.captures[0];
+            //     alert(
+            //       "Transaction " +
+            //         transaction.status +
+            //         ": " +
+            //         transaction.id +
+            //         "\n\nSee console for all available details"
+            //     );
+            //     // When ready to go live, remove the alert and show a success message within this page. For example:
+            //     // var element = document.getElementById('paypal-button-container');
+            //     // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            //     // Or go to another URL:  actions.redirect('thank_you.html');
+            //   });
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
+  </body>
+</html>

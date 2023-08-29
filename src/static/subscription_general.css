@@ -1,0 +1,665 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.page-container {
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.display-hide {
+  display: none !important;
+}
+.overlay-display {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.ov-container {
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  width: 60%;
+  height: 70%;
+  padding: 3.2rem;
+  gap: 2.4rem;
+  /* display: flex; */
+}
+/********************* font style setup *********************/
+.h-1-main {
+  font-family: "Abril Fatface", cursive !important;
+  font-size: 4.5rem !important;
+  font-weight: 400 !important;
+  line-height: 1.155 !important;
+  letter-spacing: 0rem !important;
+}
+
+.h-2-help {
+  font-family: "Abril Fatface", cursive !important;
+  font-size: 3.6rem !important;
+  font-weight: 400 !important;
+  line-height: 1.22 !important;
+  letter-spacing: 0rem !important;
+}
+
+.h-3-main {
+  font-family: "Abril Fatface", cursive !important;
+  font-size: 2.8rem !important;
+  font-weight: 400 !important;
+  line-height: 1.286 !important;
+  letter-spacing: 0rem !important;
+}
+
+.h-4-help-medium {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 500 !important;
+  line-height: 1.273 !important;
+  letter-spacing: 0rem !important;
+}
+
+.h-5-main-bold {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01rem !important;
+}
+
+.h-5-main-semibold {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01rem !important;
+}
+
+.p-main-semibold {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01rem !important;
+}
+
+.p-main-reg {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.015rem !important;
+}
+
+.p-help-semibold {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  line-height: 1.42 !important;
+  letter-spacing: 0.01rem !important;
+}
+
+.p-help-reg {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  line-height: 1.42 !important;
+  letter-spacing: 0.025rem !important;
+}
+
+/* colors */
+
+.color-sample {
+  /* Grays/000 */
+  color: #fffcf9;
+  /* Grays/200 */
+  color: #d1cfcc;
+  /* Grays/400 */
+  color: #a39f99;
+  /* Grays/600 */
+  color: #746e67;
+  /* Grays/800 */
+  color: #463e34;
+  /* Grays/1000 */
+  color: #180e01;
+
+  /* Orange */
+  /* Primary color/dark/A */
+  color: #d57b08;
+  /* Primary color/dark/B */
+  color: #a66006;
+  /* Primary color/light/A */
+  color: #fdf3e6;
+  /* Primary color/light/B */
+  color: #f6c484;
+  /* Primary color/main */
+  color: #ed8909;
+
+  /* Green */
+  /* Secondary color/A/dark */
+  color: #0f705d;
+  /* Secondary color/A/light */
+  color: #8bd0c2;
+  /* Secondary color/A/main */
+  color: #16a085;
+
+  /* Red */
+  /* Secondary color/B/dark */
+  color: #be2e3a;
+  /* Secondary color/B/light */
+  color: #f48892;
+  /* Secondary color/B/main */
+  color: #ed3949;
+}
+
+/********************* container setup *********************/
+.container {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+.container-background {
+  background-color: #fdf3e6;
+  border-radius: 2.4rem;
+}
+
+/********************* spacing bottom *********************/
+.section-spacing-bt {
+  margin-bottom: 9.6rem;
+}
+
+.help-margin-bt-8 {
+  margin-bottom: 0.8rem;
+}
+.help-margin-bt-16 {
+  margin-bottom: 1.6rem;
+}
+.help-margin-bt-24 {
+  margin-bottom: 2.4rem;
+}
+.help-margin-bt-32 {
+  margin-bottom: 3.2rem;
+}
+.help-margin-bt-48 {
+  margin-bottom: 4.8rem;
+}
+/********************* button & links*********************/
+/**** Option seclection****/
+.btn-select-type {
+  border: none;
+  padding: 1.2rem 3.2rem;
+  color: #fff;
+  background-color: #ed8909;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+/**** Input boxes****/
+.input-label {
+  display: block;
+}
+
+.input-box {
+  border: 0.2rem solid #ed8909;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+}
+.input-box::placeholder {
+  color: #a39f99;
+}
+.input-box-large {
+  width: 55%;
+}
+.input-box-medium {
+  width: 40%;
+  /* display: block; */
+}
+.input-box-small {
+  width: 25%;
+}
+
+.input-field-disabled {
+  color: #a39f99 !important;
+  cursor: not-allowed !important;
+}
+
+/**** Buttons****/
+.btn,
+.btn-upload[type="file"]::-webkit-file-upload-button {
+  border: none;
+  border-radius: 1.2rem;
+  padding: 1.2rem 3.2rem;
+  background-color: #ed8909;
+  color: #fdf3e6;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-upload[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #a66006;
+  cursor: pointer;
+}
+.btn-with-icon {
+  gap: 0.4rem;
+}
+.btn.btn-not-active {
+  background-color: #a39f99 !important;
+  cursor: not-allowed;
+}
+.btn-not-displayed {
+  display: none;
+}
+.btn-upload[type="file"]::-webkit-file-upload-button {
+  line-height: inherit !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
+.btn-list {
+  padding-top: 2.4rem;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+.form-btn-icon {
+  color: #ed8909;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-btn-icon:hover {
+  color: #a66006;
+}
+
+/**** Radio Button ****/
+.radio-btn[type="radio"] {
+  appearance: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 0.35rem solid #ed8909;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+.radio-btn[type="radio"]:disabled {
+  border-color: #a39f99;
+}
+.radio-btn[type="radio"]::before {
+  align-self: center;
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #ed8909;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.radio-btn[type="radio"]:checked::before {
+  transform: scale(1);
+}
+/********************* grid setup*********************/
+
+.grid {
+  display: grid;
+}
+
+.rc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 28.8rem);
+  row-gap: 6.4rem;
+  column-gap: 6.4rem;
+}
+
+.rc-grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/********************* flex stup *********************/
+
+.flex-row {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/********************* Header *********************/
+/* Main Navigation bar */
+
+.main-nav-bar {
+  height: 7rem;
+  width: 100%;
+  background-color: #fdf3e6;
+  padding: 0.8rem 8rem;
+}
+
+.nav-bar-flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-nav-bar {
+  height: 5.4rem;
+  width: fit-content;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list-flex {
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-item-link:link,
+.nav-item-link:visited {
+  text-decoration: none;
+  color: #180e01;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-item-link:hover,
+.nav-item-link:active {
+  color: #a66006;
+}
+
+.nav-item-flex {
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.nav-item-icon {
+  font-size: 2.7rem;
+}
+
+.nav-item-img-container {
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.nav-item-img {
+  width: 100%;
+}
+.nav-item-link.nav-link-active:link,
+.nav-item-link.nav-link-active:visited {
+  color: #ed8909;
+}
+.nav-item-link.nav-link-active:hover,
+.nav-item-link.nav-link-active:active {
+  color: #ed8909;
+}
+.nav-item-hide {
+  /*remove-later*/
+  display: none;
+}
+
+/* search box design */
+.search-container {
+  padding: 2.4rem 6.4rem;
+  gap: 2.4rem;
+  align-items: center;
+}
+.search-box {
+  align-self: center;
+  width: 62rem;
+  border-radius: 1.2rem;
+  justify-content: stretch;
+}
+.search-input-box {
+  border: none;
+  flex-grow: 1;
+  border: 0.2rem solid #ed8909;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  padding-left: 1.2rem;
+}
+.search-input-box::placeholder {
+  color: #a39f99;
+}
+.search-type-select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.quick-link-bar .nav-list-flex {
+  width: 62rem;
+  justify-content: space-between;
+}
+.search-inactive {
+  display: none;
+}
+
+/********************* Secondary Navigation Bar *********************/
+.second-nav-container {
+  padding: 2.4rem 6.4rem;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.second-nav-link-bar .nav-list-flex {
+  /* width: 62rem; */
+  gap: 6.4rem;
+  justify-content: space-around;
+}
+/********************* Recipe cards *********************/
+
+.recipe-card-btn:link,
+.recipe-card-btn:visited {
+  display: inline-block;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #180e01;
+  transition: all 0.3s;
+}
+.recipe-card-btn:hover,
+.recipe-card-btn:active {
+  display: inline-block;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.recipe-card-btn:hover {
+  transform: scale(1.025);
+}
+.recipe-card {
+  width: 28.8rem;
+  gap: 2.4rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  background-color: #fff;
+  /* box-shadow: 0 1.4rem 4.8rem rgba(0, 0, 0, 0.1); */
+  box-shadow: -0.2rem -0.2rem 1rem rgba(0, 0, 0, 0.1),
+    0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  /* temporary */
+  /* transition: all 0.3s; */
+}
+.recipe-card:hover {
+  /* transform: scale(1.025); */
+}
+.rc-image-container {
+  max-width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+.rc-food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rc-content-container {
+  max-width: 100%;
+  gap: 2.4rem;
+  padding: 0 2.4rem;
+}
+.rc-title-container {
+  width: 100%;
+  height: 4.8rem;
+  overflow: clip;
+  /* text-overflow: ellipsis; */
+  direction: ltr;
+}
+.rc-author-details {
+  gap: 0.8rem;
+  align-items: center;
+}
+.rc-auth-img-container {
+  flex-basis: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.rc-auth-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rc-action-btns {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.rc-action-set {
+  gap: 1.6rem;
+}
+.icon-inactive {
+  display: none;
+}
+.like-box,
+.dislike-box {
+  gap: 0.4rem;
+  align-items: center;
+}
+.like-icon {
+  color: #8bd0c2;
+}
+.dislike-icon {
+  color: #f48892;
+}
+.bookmark-icon {
+  color: #f6c484;
+}
+
+.rc-food-type-indicate {
+  height: 2.4rem;
+  width: auto;
+}
+.rc-veg {
+  background-color: #8bd0c2;
+}
+.rc-nonveg {
+  background-color: #f48892;
+}
+.rc-egg {
+  background-color: #f6c484;
+}
+.rc-noRecipe {
+  background-color: #463e34 !important;
+}
+.rc-noRecipe-c {
+  color: #463e34 !important;
+}
+/********************* Section Navigation bar *********************/
+
+.form-nav-list {
+  list-style: none;
+  justify-content: space-around;
+}
+.form-nav-btn:link,
+.form-nav-btn:visited {
+  text-decoration: none;
+  color: #180e01;
+  transition: all 0.3s;
+}
+.form-nav-btn:hover,
+.form-nav-btn:active {
+  text-decoration: none;
+  color: #a66006;
+  cursor: pointer;
+}
+.nav-btn-highlight {
+  height: 0.8rem;
+  margin-top: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  background-color: #ed8909;
+  opacity: 0;
+}
+.nav-btn-active {
+  color: #ed8909;
+  opacity: 100%;
+  cursor: default;
+}
+
+/************************************************/
+/********************* Section boxes *********************/
+
+/**** Section rc Flex Display ****/
+
+.section-card-display {
+  padding: 6.4rem;
+  gap: 6.4rem;
+}
+/* Section Card Display */
+.recipe-card-display-box {
+  gap: 3.2rem;
+  width: 100%;
+  padding: 3.2rem 2.4rem;
+  overflow: scroll;
+}
+
+/**** Section rc Grid Display ****/
+.section-rc-display {
+  padding: 6.4rem;
+}
+.section-rc-display-hide {
+  display: none;
+}
+/************************************************/
+/********************* Footer Section *********************/
+.footer {
+  margin-top: auto;
+  padding: 3.2rem 0;
+  width: 100%;
+  color: #fffcf9;
+  background-color: #463e34;
+  gap: 1.6rem;
+  align-items: center;
+}
+/* 
+ Spacing system
+ 
+ 8px, 12px, 16px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px 
+ */
+
+ /* ___________________ ADDITIONAL COMPONENT CSS____________________*/
+ .emptyMessage {
+  background: none;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  /* width: 240px; */
+  margin: 16px;
+  text-align: center;
+  opacity: 0.6; /* Real browsers */
+  filter: alpha(opacity = 60);
+}

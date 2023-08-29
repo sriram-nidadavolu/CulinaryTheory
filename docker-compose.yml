@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        restart: always
+        env_file:
+            - ./src/.env
+        ports:
+            - 27018:27017
+        volumes:
+            - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+            - ./data:/data/db
+
+    api:
+      build:
+        context: ./
+        dockerfile: ./Dockerfile
+      env_file:
+        - ./src/.env
+      volumes:
+        - ./src:/home/node/app/src
+      ports:
+        - 9000:9000
+      links:
+        - mongodb
+      depends_on:
+        - mongodb

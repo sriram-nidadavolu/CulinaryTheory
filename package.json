@@ -1,0 +1,27 @@
+{
+  "name": "CulinaryTheory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node --trace-warnings src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinayrv/CulinaryTheory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1267.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.7.0",
+    "multer": "*",
+    "nanoid": "^2.1.11",
+    "nodemailer": "^6.8.0",
+    "path": "^0.12.7"
+  }
+}

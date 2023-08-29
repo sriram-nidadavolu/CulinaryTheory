@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account View Page | Culinary Theory</title>
+
+    <!-- Fonts Inclusion -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
+    />
+
+    <!-- css style sheets Inclusion -->
+    <link href="/general.css" rel="stylesheet" />
+    <link href="/accCss/style.css" rel="stylesheet" />
+    <script defer src="/js/accView.js"></script>
+  </head>
+  <body>
+    <div class="page-container flex-column">
+      <div>
+
+        <!-- --------- Edit Profile Details Form --------- -->
+        <section class="edit-profile-form overlay-display display-hide">
+          <div class="container-background ov-container flex-column">
+            <div class="ov-close-btn-box flex-row">
+              <div class="material-icons form-btn-icon" id="edit-frm-close">
+                cancel
+              </div>
+            </div>
+            <form class="flex-column ov-form formalign" action="#">
+              <div class="help-margin-bt-32">
+                <div>
+                  <label
+                    for="user-email"
+                    class="h-3-main input-label help-margin-bt-24"
+                    >Edit Profile</label
+                  >
+                  <p
+                  class="p-help-semibold err-display-c help-margin-bt-8 display-hide"
+                  id="edit-err-msg"
+                >
+                </p>
+
+                  <input
+                    type="text"
+                    class="input-box h-5-main-semibold ov-input-box-med help-margin-bt-16"
+                    id="user-name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <p class="p-help-semibold help-margin-bt-8">
+                    Max 300 characters
+                  </p>
+                  <input
+                    type="text"
+                    class="input-box h-5-main-semibold ov-input-box-med help-margin-bt-8"
+                    id="user-bio"
+                    placeholder="About Me"
+                    
+                  />
+                </div>
+                
+            
+              <div class="help-margin-bt-16">
+                <p class="constraint-label p-help-semibold help-margin-bt-8">
+                  (.jpeg, .png &ast;)
+                </p>
+                <input
+                  type="file"
+                  class="btn-upload h-5-main-semibold"
+                  id="profile-image"
+                  placeholder="profile-image"
+                  
+                />
+              </div>
+              <div class="btn-list flex-row">
+                <button class="btn h-5-main-bold" id="profile-update">Update</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- ------------------- Update Password ------------------- -->
+        <section class="update-password-form overlay-display display-hide">
+          <div class="container-background ov-container flex-column">
+            <div class="ov-close-btn-box flex-row">
+              <div class="material-icons form-btn-icon" id="pwd-frm-close">
+                cancel
+              </div>
+            </div>
+            <form class="flex-column ov-form formalign" action="#">
+              <div class="help-margin-bt-32">
+                <div>
+                  <label
+                    for="user-email"
+                    class="h-3-main input-label help-margin-bt-24"
+                    >Update Password</label
+                  >
+                  <p
+                  class="p-help-semibold err-display-c help-margin-bt-8 display-hide"
+                  id="pwd-err-msg"
+                >
+                </p>
+
+                  <input
+                    type="password"
+                    class="input-box h-5-main-semibold ov-input-box-med help-margin-bt-16"
+                    id="curr-password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    class="input-box h-5-main-semibold ov-input-box-med help-margin-bt-8"
+                    id="new-password"
+                    placeholder="New Password"
+                    
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="password"
+                    class="input-box h-5-main-semibold ov-input-box-med help-margin-bt-8"
+                    id="new-password-conf"
+                    placeholder="Confirm Password"
+                    
+                  />
+                </div>
+                
+              <div class="btn-list flex-row">
+                <button class="btn h-5-main-bold" id="change-password">Update</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <header class="header section-spacing-bt">
+
+          <!-- ------------------- Main Navigation Bar ------------------- -->
+          <div class="main-nav-bar flex-row nav-bar-flex help-margin-bt-24">
+            <a href="#" class="logo-nav-bar">
+              <svg
+                class="logo-nav-bar"
+                width="347"
+                height="161"
+                viewBox="0 0 347 161"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 61.28C0 56.8 0.896 52.8107 2.688 49.312C4.52267 45.8133 7.12533 43.104 10.496 41.184C13.8667 39.2213 17.8347 38.24 22.4 38.24C26.3253 38.24 29.824 38.9867 32.896 40.48C36.0107 41.9307 38.528 44 40.448 46.688C42.4107 49.376 43.712 52.512 44.352 56.096H29.376C28.6933 54.6027 27.712 53.4507 26.432 52.64C25.1947 51.7867 23.7653 51.36 22.144 51.36C19.7547 51.36 17.856 52.256 16.448 54.048C15.0827 55.84 14.4 58.2507 14.4 61.28C14.4 64.3093 15.0827 66.72 16.448 68.512C17.856 70.304 19.7547 71.2 22.144 71.2C23.7653 71.2 25.1947 70.7947 26.432 69.984C27.712 69.1307 28.6933 67.9573 29.376 66.464H44.352C43.712 70.048 42.4107 73.184 40.448 75.872C38.528 78.56 36.0107 80.6507 32.896 82.144C29.824 83.5947 26.3253 84.32 22.4 84.32C17.8347 84.32 13.8667 83.36 10.496 81.44C7.12533 79.4773 4.52267 76.7467 2.688 73.248C0.896 69.7493 0 65.76 0 61.28Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M63.3555 38.688V64.224C63.3555 66.3147 63.8035 67.9787 64.6995 69.216C65.6382 70.4107 67.1315 71.008 69.1795 71.008C71.2275 71.008 72.7422 70.4107 73.7235 69.216C74.7048 67.9787 75.1955 66.3147 75.1955 64.224V38.688H89.3395V64.224C89.3395 68.5333 88.4435 72.224 86.6515 75.296C84.8595 78.3253 82.4062 80.608 79.2915 82.144C76.1768 83.68 72.6995 84.448 68.8595 84.448C65.0195 84.448 61.6062 83.68 58.6195 82.144C55.6755 80.608 53.3715 78.3253 51.7075 75.296C50.0435 72.2667 49.2115 68.576 49.2115 64.224V38.688H63.3555Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M109.676 73.248H123.372V84H95.4675V38.688H109.676V73.248Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M142.051 38.688V84H127.842V38.688H142.051Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M191.872 84H177.664L162.448 61.216V103.5H148.5V38.688H162.448L177.664 61.856V38.688H191.872V84Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M227.398 77.152H212.295L210.055 84H195.143L211.719 38.688H228.103L244.615 84H229.639L227.398 77.152ZM223.943 66.464L219.846 53.856L215.751 66.464H223.943Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M270.626 84L262.114 67.744H262.05V84H247.843V38.688H268.962C272.632 38.688 275.768 39.3493 278.37 40.672C280.973 41.952 282.914 43.7227 284.194 45.984C285.517 48.2027 286.178 50.72 286.178 53.536C286.178 56.5653 285.325 59.2533 283.618 61.6C281.954 63.9467 279.544 65.632 276.386 66.656L286.242 84H270.626ZM262.05 58.272H267.682C269.048 58.272 270.072 57.9733 270.754 57.376C271.437 56.736 271.778 55.7547 271.778 54.432C271.778 53.2373 271.416 52.2987 270.69 51.616C270.008 50.9333 269.005 50.592 267.682 50.592H262.05V58.272Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M287.837 54.688V53.536H306.397V54.688H302.941L309.917 75.936L317.341 54.688H313.053V53.536H322.077V54.688H318.877L306.909 89.184C305.501 93.1947 303.923 95.9893 302.173 97.568C300.424 99.1893 298.291 100 295.773 100C293.256 100 291.272 99.424 289.821 98.272C288.371 97.12 287.645 95.648 287.645 93.856C287.645 92.064 288.115 90.6987 289.053 89.76C289.992 88.8213 291.229 88.352 292.765 88.352C296.307 88.352 298.077 89.824 298.077 92.768C298.077 93.408 297.949 94.176 297.693 95.072H295.453C295.112 96.0533 295.069 96.864 295.326 97.504C295.582 98.144 296.158 98.464 297.053 98.464C298.803 98.464 300.36 97.5893 301.725 95.84C303.091 94.1333 304.392 91.5093 305.629 87.968L307.037 84H301.405L290.461 54.688H287.837Z"
+                  fill="#180E01"
+                />
+                <path
+                  d="M148.5 134.275V110.65H144.375V109.3H148.5V99.625L162.45 96.175V109.3H172.2V110.65H162.45V135.925C162.45 138.275 162.675 140 163.125 141.1C163.625 142.2 164.625 142.75 166.125 142.75C167.625 142.75 168.925 142 170.025 140.5C171.175 139 171.925 136.95 172.275 134.35L173.55 134.5C173.15 137.95 172.05 140.7 170.25 142.75C168.45 144.75 165.475 145.75 161.325 145.75C157.175 145.75 154 144.925 151.8 143.275C149.6 141.625 148.5 138.625 148.5 134.275Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M174.157 97H189.581V120.424C190.263 118.461 191.309 116.883 192.717 115.688C194.125 114.493 196.258 113.896 199.117 113.896C205.73 113.896 209.037 117.459 209.037 124.584V143.848H212.621V145H194.509V143.848H197.133V123.048C197.133 120.488 196.962 118.845 196.621 118.12C196.279 117.352 195.661 116.968 194.765 116.968C193.399 116.968 192.183 117.864 191.117 119.656C190.093 121.448 189.581 123.624 189.581 126.184V143.848H192.333V145H174.157V143.848H177.677V98.152H174.157V97Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M230.426 145.64C224.922 145.64 220.783 144.232 218.01 141.416C215.279 138.557 213.914 134.611 213.914 129.576C213.914 124.499 215.45 120.616 218.522 117.928C221.637 115.24 225.583 113.896 230.362 113.896C240.047 113.896 244.698 118.76 244.314 128.488H226.266V130.984C226.266 135.165 226.799 138.323 227.866 140.456C228.933 142.589 230.789 143.656 233.434 143.656C238.383 143.656 241.626 141.011 243.162 135.72L244.314 135.912C243.503 138.984 242.031 141.373 239.898 143.08C237.807 144.787 234.65 145.64 230.426 145.64ZM226.33 127.208H232.922V124.072C232.922 120.616 232.709 118.269 232.282 117.032C231.898 115.752 231.087 115.112 229.85 115.112C228.655 115.112 227.759 115.795 227.162 117.16C226.607 118.483 226.33 120.787 226.33 124.072V127.208Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M267.266 132.392V126.952C267.266 122.813 267.031 119.805 266.562 117.928C266.135 116.008 265.111 115.048 263.49 115.048C262.551 115.048 261.783 115.325 261.186 115.88C260.631 116.392 260.226 117.267 259.97 118.504C259.586 120.424 259.394 123.347 259.394 127.272V132.264C259.394 136.915 259.522 139.709 259.778 140.648C260.077 141.587 260.375 142.355 260.674 142.952C261.143 143.976 262.061 144.488 263.426 144.488C265.09 144.488 266.178 143.528 266.69 141.608C267.074 140.243 267.266 137.171 267.266 132.392ZM263.298 145.64C257.965 145.64 253.933 144.275 251.202 141.544C248.471 138.813 247.106 134.909 247.106 129.832C247.106 124.712 248.557 120.787 251.458 118.056C254.402 115.283 258.519 113.896 263.81 113.896C269.101 113.896 273.047 115.176 275.65 117.736C278.253 120.253 279.554 124.115 279.554 129.32C279.554 140.2 274.135 145.64 263.298 145.64Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M302.72 116.328C301.141 116.328 299.755 117.352 298.56 119.4C297.365 121.448 296.768 123.88 296.768 126.696V143.848H301.312V145H281.344V143.848H284.864V115.688H281.344V114.536H296.768V120.68C297.323 118.504 298.389 116.84 299.968 115.688C301.547 114.493 303.339 113.896 305.344 113.896C307.349 113.896 308.971 114.472 310.208 115.624C311.488 116.733 312.128 118.333 312.128 120.424C312.128 122.472 311.659 124.051 310.72 125.16C309.781 126.269 308.331 126.824 306.368 126.824C304.448 126.824 303.019 126.184 302.08 124.904C301.184 123.624 301.077 121.853 301.76 119.592H304.064C305.131 117.416 304.683 116.328 302.72 116.328Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M311.774 115.688V114.536H330.334V115.688H326.878L333.854 136.936L341.278 115.688H336.99V114.536H346.014V115.688H342.814L330.846 150.184C329.438 154.195 327.859 156.989 326.11 158.568C324.361 160.189 322.227 161 319.71 161C317.193 161 315.209 160.424 313.758 159.272C312.307 158.12 311.582 156.648 311.582 154.856C311.582 153.064 312.051 151.699 312.99 150.76C313.929 149.821 315.166 149.352 316.702 149.352C320.243 149.352 322.014 150.824 322.014 153.768C322.014 154.408 321.886 155.176 321.63 156.072H319.39C319.049 157.053 319.006 157.864 319.262 158.504C319.518 159.144 320.094 159.464 320.99 159.464C322.739 159.464 324.297 158.589 325.662 156.84C327.027 155.133 328.329 152.509 329.566 148.968L330.974 145H325.342L314.398 115.688H311.774Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M29.2401 21.852V10.512H27.2601V9.864H29.2401V5.22L35.9361 3.564V9.864H40.6161V10.512H35.9361V22.644C35.9361 23.772 36.0441 24.6 36.2601 25.128C36.5001 25.656 36.9801 25.92 37.7001 25.92C38.4201 25.92 39.0441 25.56 39.5721 24.84C40.1241 24.12 40.4841 23.136 40.6521 21.888L41.2641 21.96C41.0721 23.616 40.5441 24.936 39.6801 25.92C38.8161 26.88 37.3881 27.36 35.3961 27.36C33.4041 27.36 31.8801 26.964 30.8241 26.172C29.7681 25.38 29.2401 23.94 29.2401 21.852Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M41.608 0H50.284V13.176C50.668 12.072 51.256 11.184 52.048 10.512C52.84 9.84 54.04 9.504 55.648 9.504C59.368 9.504 61.228 11.508 61.228 15.516V26.352H63.244V27H53.056V26.352H54.532V14.652C54.532 13.212 54.4361 12.288 54.244 11.88C54.052 11.448 53.704 11.232 53.2 11.232C52.432 11.232 51.748 11.736 51.148 12.744C50.572 13.752 50.284 14.976 50.284 16.416V26.352H51.832V27H41.608V26.352H43.588V0.648H41.608V0Z"
+                  fill="#ED8909"
+                />
+                <path
+                  d="M73.2596 27.36C70.1636 27.36 67.8356 26.568 66.2756 24.984C64.7396 23.376 63.9716 21.156 63.9716 18.324C63.9716 15.468 64.8356 13.284 66.5636 11.772C68.3156 10.26 70.5356 9.504 73.2236 9.504C78.6716 9.504 81.2876 12.24 81.0716 17.712H70.9196V19.116C70.9196 21.468 71.2196 23.244 71.8196 24.444C72.4196 25.644 73.4636 26.244 74.9516 26.244C77.7356 26.244 79.5596 24.756 80.4236 21.78L81.0716 21.888C80.6156 23.616 79.7876 24.96 78.5876 25.92C77.4116 26.88 75.6356 27.36 73.2596 27.36ZM70.9556 16.992H74.6636V15.228C74.6636 13.284 74.5436 11.964 74.3036 11.268C74.0876 10.548 73.6316 10.188 72.9356 10.188C72.2636 10.188 71.7596 10.572 71.4236 11.34C71.1116 12.084 70.9556 13.38 70.9556 15.228V16.992Z"
+                  fill="#ED8909"
+                />
+              </svg>
+            </a>
+            <nav class="nav-bar">
+              <ul class="nav-list flex-row nav-list-flex h-5-main-bold">
+                <li class="nav-list-item">
+                  <a href="#" class="nav-item-link" id="home-btn"
+                    ><p>Home</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a href="#" class="nav-item-link" id="about-us-btn"
+                    ><p>About Us</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a
+                    href="#"
+                    class="nav-item-link flex-row nav-item-flex"
+                    id="recipe-create-btn"
+                  >
+                    <div class="material-icons nav-item-icon">add_circle</div>
+                    <p>Recipe</p>
+                  </a>
+                </li>
+                <li class="nav-list-item display-hide">
+                  <a href="#" class="nav-item-link" id="login-signup-btn"
+                    ><p>Login/SignUp</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a
+                    href="#"
+                    class="nav-item-link flex-row nav-item-flex nav-link-active"
+                    id="account-btn"
+                    ><div class="nav-item-img-container" id="nav-user-img-ct">
+                      <img
+                        class="nav-item-img"
+                        id="nav-user-img"
+                        src="../img/people/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                        alt="Photo of the user"
+                      />
+                    </div>
+                    <p id="nav-auth-name">Account Name</p></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- ------------------- Secondary Navigation Bar ------------------- -->
+          <div
+            class="container second-nav-container flex-column container-background"
+          >
+            <nav class="second-nav-link-bar">
+              <ul
+                class="nav-list flex-row nav-list-flex h-5-main-bold js-sc-nav-bar"
+              >
+                <li class="nav-list-item">
+                  <a
+                    href="#"
+                    class="nav-item-link nav-link-active js-sc-nav-btn-1"
+                    ><p>Profile</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a
+                    href="#"
+                    class="nav-item-link flex-row nav-item-flex js-sc-nav-btn-2"
+                  >
+                    <div class="material-icons nav-item-icon">edit</div>
+                    <p>Edit Profile</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a href="#" class="nav-item-link js-sc-nav-btn-3"
+                    ><p>Change Password</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a href="#" class="nav-item-link js-sc-nav-btn-4"
+                    ><p>Manage Subscription</p></a
+                  >
+                </li>
+                <li class="nav-list-item">
+                  <a href="#" class="nav-item-link js-sc-nav-btn-5"
+                    ><p>Logout</p></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main class="section-spacing-bt">
+          <!-- ------------------- Profile display & Section Navigation bar ------------------- -->
+          <header class="section-nav-header container help-margin-bt-32">
+            <!-- <h1 class="h-1-main header-title help-margin-bt-32">
+              Create your recipe
+            </h1> -->
+            <div class="profile-display-box flex-row section-spacing-bt">
+              <div class="profile-image-container">
+                <img
+                  class="profile-image"
+                  id="prof-auth-img"
+                  src="./../img/people/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                  alt="Cameron Williamson Image"
+                />
+              </div>
+              <div class="profile-details-container flex-column">
+                <p class="h-3-main" id="prof-auth-name">Camerom Williamson</p>
+                <p class="h-5-main-semibold" id="prof-auth-bio">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quas, veritatis fugit? Iure explicabo, ipsam at architecto
+                  molestias consequatur minima incidunt rem nesciunt non est
+                  dolor eveniet, impedit tempore ea tenetur.
+                </p>
+              </div>
+            </div>
+            <nav class="form-nav-bar">
+              <ul class="form-nav-list flex-row">
+                <li class="form-nav-item">
+                  <a href="#" class="form-nav-btn js-sec-nav-1">
+                    <p class="nav-btn-text h-5-main-bold nav-btn-active">
+                      My Recipes
+                    </p>
+                    <div class="nav-btn-highlight nav-btn-active"></div>
+                  </a>
+                </li>
+                <li class="form-nav-item">
+                  <a href="#" class="form-nav-btn js-sec-nav-2">
+                    <p class="nav-btn-text h-5-main-bold">Saved</p>
+                    <div class="nav-btn-highlight"></div>
+                  </a>
+                </li>
+                <li class="form-nav-item">
+                  <a href="#" class="form-nav-btn js-sec-nav-3">
+                    <p class="nav-btn-text h-5-main-bold">Drafts</p>
+                    <div class="nav-btn-highlight"></div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <!-- ------------------- Section User Recipe Display ------------------- -->
+          <!-- ---------- Section My Recipes ---------- -->
+          <section
+            class="section-rc-display container container-background"
+            id="my-recipes"
+          >
+            <div class="rc-grid js-search-rc-box help-margin-bt-48">
+              <!-- ---------------- Card 1 - Default Recipe Card ---------------- -->
+              <a href="#" class="recipe-card-btn">
+                <div class="recipe-card flex-column">
+                  <!-- ------------------- Image ------------------- -->
+                  <div class="rc-image-container">
+                    <img
+                      src="./../img/placeHolderImage.jpeg"
+                      alt="Photo of food"
+                      class="rc-food-image"
+                    />
+                  </div>
+                  <!-- ------------------- Recipe content ------------------- -->
+                  <div class="rc-content-container flex-column">
+                    <div class="rc-title-container">
+                      <p class="rc-title p-main-semibold">
+                        No recipes to display
+                      </p>
+                    </div>
+                    <div class="rc-author-details flex-row">
+                      <div class="rc-auth-img-container">
+                        <img
+                          src="./../img/personPHpreview.jpeg"
+                          alt="Photo of Author"
+                          class="rc-auth-image"
+                        />
+                      </div>
+                      <p class="rc-auth-name p-main-semibold">
+                        The Culinary Theory
+                      </p>
+                    </div>
+                    <div class="rc-action-btns flex-row">
+                      <div class="rc-action-set flex-row">
+                        <div class="like-box flex-row">
+                          <p class="like-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined like-icon rc-noRecipe-c"
+                              >thumb_up</span
+                            >
+                            <span
+                              class="material-icons like-icon icon-inactive icon-filled"
+                              >thumb_up</span
+                            >
+                          </div>
+                        </div>
+                        <div class="dislike-box flex-row">
+                          <p class="dislike-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined dislike-icon rc-noRecipe-c"
+                              >thumb_down</span
+                            >
+                            <span
+                              class="material-icons dislike-icon icon-inactive icon-filled"
+                              >thumb_down</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rc-action-set flex-row">
+                        <div class="rc_action_link">
+                          <span
+                            class="material-icons-outlined bookmark-icon rc-noRecipe-c"
+                            >bookmark_outline</span
+                          >
+                          <span
+                            class="material-icons bookmark-icon icon-filled icon-inactive"
+                            >bookmark</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ------------------- Recipe Indicator ------------------- -->
+                  <div class="rc-food-type-indicate rc-noRecipe"></div>
+                </div>
+              </a>
+              <!-- ------------------- Card 2 ------------------- -->
+            </div>
+            <div class="btn-list flex-row">
+              <p class="h-5-main-semibold js-load-more-msg display-hide">
+                No more results
+              </p>
+              <button class="btn h-5-main-bold js-load-more-btn">
+                Load More
+              </button>
+            </div>
+          </section>
+          <!-- ---------- Section Saved Recipes ---------- -->
+          <section
+            class="section-rc-display container container-background display-hide"
+            id="saved-recipes"
+          >
+            <div class="rc-grid js-search-rc-box help-margin-bt-48">
+              <!-- ---------------- Card 1 - Default Recipe Card ---------------- -->
+              <a href="#" class="recipe-card-btn">
+                <div class="recipe-card flex-column">
+                  <!-- ------------------- Image ------------------- -->
+                  <div class="rc-image-container">
+                    <img
+                      src="./../img/placeHolderImage.jpeg"
+                      alt="Photo of food"
+                      class="rc-food-image"
+                    />
+                  </div>
+                  <!-- ------------------- Recipe content ------------------- -->
+                  <div class="rc-content-container flex-column">
+                    <div class="rc-title-container">
+                      <p class="rc-title p-main-semibold">
+                        No recipes to display
+                      </p>
+                    </div>
+                    <div class="rc-author-details flex-row">
+                      <div class="rc-auth-img-container">
+                        <img
+                          src="./../img/personPHpreview.jpeg"
+                          alt="Photo of Author"
+                          class="rc-auth-image"
+                        />
+                      </div>
+                      <p class="rc-auth-name p-main-semibold">
+                        The Culinary Theory
+                      </p>
+                    </div>
+                    <div class="rc-action-btns flex-row">
+                      <div class="rc-action-set flex-row">
+                        <div class="like-box flex-row">
+                          <p class="like-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined like-icon rc-noRecipe-c"
+                              >thumb_up</span
+                            >
+                            <span
+                              class="material-icons like-icon icon-inactive icon-filled"
+                              >thumb_up</span
+                            >
+                          </div>
+                        </div>
+                        <div class="dislike-box flex-row">
+                          <p class="dislike-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined dislike-icon rc-noRecipe-c"
+                              >thumb_down</span
+                            >
+                            <span
+                              class="material-icons dislike-icon icon-inactive icon-filled"
+                              >thumb_down</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rc-action-set flex-row">
+                        <div class="rc_action_link">
+                          <span
+                            class="material-icons-outlined bookmark-icon rc-noRecipe-c"
+                            >bookmark_outline</span
+                          >
+                          <span
+                            class="material-icons bookmark-icon icon-filled icon-inactive"
+                            >bookmark</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ------------------- Recipe Indicator ------------------- -->
+                  <div class="rc-food-type-indicate rc-noRecipe"></div>
+                </div>
+              </a>
+              <!-- ------------------- Card 2 ------------------- -->
+            </div>
+            <div class="btn-list flex-row">
+              <p class="h-5-main-semibold js-load-more-msg display-hide">
+                No more Search results
+              </p>
+              <button class="btn h-5-main-bold js-load-more-btn">
+                Load More
+              </button>
+            </div>
+          </section>
+          <!-- ---------- Section Draft Recipes ---------- -->
+          <section
+            class="section-rc-display container container-background display-hide"
+            id="draft-recipes"
+          >
+            <div class="rc-grid js-search-rc-box help-margin-bt-48">
+              <!-- ---------------- Card 1 - Default Recipe Card ---------------- -->
+              <a href="#" class="recipe-card-btn">
+                <div class="recipe-card flex-column">
+                  <!-- ------------------- Image ------------------- -->
+                  <div class="rc-image-container">
+                    <img
+                      src="./../img/placeHolderImage.jpeg"
+                      alt="Photo of food"
+                      class="rc-food-image"
+                    />
+                  </div>
+                  <!-- ------------------- Recipe content ------------------- -->
+                  <div class="rc-content-container flex-column">
+                    <div class="rc-title-container">
+                      <p class="rc-title p-main-semibold">
+                        No recipes to display
+                      </p>
+                    </div>
+                    <div class="rc-author-details flex-row">
+                      <div class="rc-auth-img-container">
+                        <img
+                          src="./../img/personPHpreview.jpeg"
+                          alt="Photo of Author"
+                          class="rc-auth-image"
+                        />
+                      </div>
+                      <p class="rc-auth-name p-main-semibold">
+                        The Culinary Theory
+                      </p>
+                    </div>
+                    <div class="rc-action-btns flex-row">
+                      <div class="rc-action-set flex-row">
+                        <div class="like-box flex-row">
+                          <p class="like-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined like-icon rc-noRecipe-c"
+                              >thumb_up</span
+                            >
+                            <span
+                              class="material-icons like-icon icon-inactive icon-filled"
+                              >thumb_up</span
+                            >
+                          </div>
+                        </div>
+                        <div class="dislike-box flex-row">
+                          <p class="dislike-count p-main-semibold">0</p>
+                          <div>
+                            <span
+                              class="material-icons-outlined dislike-icon rc-noRecipe-c"
+                              >thumb_down</span
+                            >
+                            <span
+                              class="material-icons dislike-icon icon-inactive icon-filled"
+                              >thumb_down</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rc-action-set flex-row">
+                        <div class="rc_action_link">
+                          <span
+                            class="material-icons-outlined bookmark-icon rc-noRecipe-c"
+                            >bookmark_outline</span
+                          >
+                          <span
+                            class="material-icons bookmark-icon icon-filled icon-inactive"
+                            >bookmark</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ------------------- Recipe Indicator ------------------- -->
+                  <div class="rc-food-type-indicate rc-noRecipe"></div>
+                </div>
+              </a>
+              <!-- ------------------- Card 2 ------------------- -->
+            </div>
+            <div class="btn-list flex-row">
+              <p class="h-5-main-semibold js-load-more-msg display-hide">
+                No more Search results
+              </p>
+              <button class="btn h-5-main-bold js-load-more-btn">
+                Load More
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- ------------------- Footer Section ------------------- -->
+      <footer class="footer flex-column">
+        <p class="h-3-main">&copy; The Culinary Theory Group</p>
+        <p class="p-help-semibold">180 College ave, New Brunswick, 08901, NJ</p>
+      </footer>
+    </div>
+  </body>
+</html>

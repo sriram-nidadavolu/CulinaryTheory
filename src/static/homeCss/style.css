@@ -1,0 +1,50 @@
+/* colors */
+
+.color-sample {
+  /* Grays/000 */
+  color: #fffcf9;
+  /* Grays/200 */
+  color: #d1cfcc;
+  /* Grays/400 */
+  color: #a39f99;
+  /* Grays/600 */
+  color: #746e67;
+  /* Grays/800 */
+  color: #463e34;
+  /* Grays/1000 */
+  color: #180e01;
+
+  /* Orange */
+  /* Primary color/dark/A */
+  color: #d57b08;
+  /* Primary color/dark/B */
+  color: #a66006;
+  /* Primary color/light/A */
+  color: #fdf3e6;
+  /* Primary color/light/B */
+  color: #f6c484;
+  /* Primary color/main */
+  color: #ed8909;
+
+  /* Green */
+  /* Secondary color/A/dark */
+  color: #0f705d;
+  /* Secondary color/A/light */
+  color: #8bd0c2;
+  /* Secondary color/A/main */
+  color: #16a085;
+
+  /* Red */
+  /* Secondary color/B/dark */
+  color: #be2e3a;
+  /* Secondary color/B/light */
+  color: #f48892;
+  /* Secondary color/B/main */
+  color: #ed3949;
+}
+/************************************************/
+/*
+ Spacing system
+ 
+ 8px, 12px, 16px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px 
+ */ ;
